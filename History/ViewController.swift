@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var DateDisplayLabel: UILabel!
   
-    var historyAeri =  [String]()
+    var historyAeri =  [Evaluation]()
   var monthName = ""
     var monthNumber = [String]()
     var todayNumber = [String]()
@@ -20,8 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        historyAeri.append(contentsOf:  MatrixTheMonths.DaysDonth( TodayTime.TodayByNumbers ().convertHindiDigits))
+        historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:TodayTime.TodayByNumbers().convertHindiDigits))
         monthName =  TodayTime.TodayNumbers ()
         monthNumber.append(contentsOf:  MatrixTheMonths.namesMonths() )
        
@@ -29,22 +28,10 @@ class ViewController: UIViewController {
         DateDisplayLabel.text = "\(TodayTime.TodayNumbers ()),\(TodayTime.Todaydaynumber())"
         collectionView2.showsHorizontalScrollIndicator = false
         collectionView2.showsVerticalScrollIndicator = false
-        var today = 0
-        var AntiSemiticDays = [String]()
-        AntiSemiticDays.append(contentsOf:  MatrixTheMonths.namestoday() )
-                    for h in 0 ..< historyAeri.count {
-                        today += 1
-                      
-                        if today > AntiSemiticDays.count - 1 {
-                            today = 0
-                        }
-                        todayNumber.append( AntiSemiticDays[today] )
-                      }
-        print(todayNumber[1])
-    }
+    
   
 }
-
+}
 extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
   
    
@@ -79,7 +66,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
 
             return cell
         }else{
-            if historyAeri[indexPath.row] == TodayTime.Todaydaynumber().convertHindiDigits && monthName == TodayTime.TodayNumbers () {
+            if historyAeri[indexPath.row].month == TodayTime.Todaydaynumber().convertHindiDigits && monthName == TodayTime.TodayNumbers () {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCell2", for: indexPath) as! HistoryCell
        
                 cell.dayLabel2.text = TodayTime.Todayday()
@@ -90,8 +77,8 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
                 return cell
             }else{
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HistoryCell", for: indexPath) as! HistoryCell
-                cell.dayLabel.text = historyAeri[indexPath.row]
-                    cell.historyLabel.text =  todayNumber[indexPath.row]
+                cell.dayLabel.text = "\(historyAeri[indexPath.row].number ?? "") \n \(historyAeri[indexPath.row].month ?? "")" 
+                cell.historyLabel.text =  historyAeri[indexPath.row].today
                 cell.viewCL.layer.cornerRadius = 15
                 cell.viewCL.layer.borderWidth = 1.5
                 cell.viewCL.layer.borderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
@@ -108,13 +95,13 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == collectionView2 {
-            
+            self.historyAeri.removeAll()
         isSelectedOtherCity = true
             if lastIndexPathCitySelected != nil{
-                print( historyAeri[indexPath.row] , TodayTime.Todaydaynumber().convertHindiDigits , monthName, TodayTime.TodayNumbers () )
+               
                 monthName =   monthNumber[indexPath.row]
             // BringDate(Month: indexPath.row)
-                MatrixTheMonths.DaysDonth("\(indexPath.row + 1 )")
+                historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)"))
                 self.collectionView.reloadData()
                 DateDisplayLabel.text = "\(monthName)"
                 return
@@ -131,12 +118,13 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
               cell.viewCL.layer.borderWidth = 1.5
         cell.viewCL.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
            monthName =   monthNumber[indexPath.row]
-            MatrixTheMonths.DaysDonth("\(indexPath.row + 1 )")
+            historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)"))
         self.collectionView.reloadData()
         lastIndexPathCitySelected = indexPath
            
         }else{
-            
+           
+           
             DateDisplayLabel.text = "\(monthName),\(historyAeri[indexPath.row])"
         }
     }
@@ -162,6 +150,12 @@ extension String {
                    "٧": "7",
                    "٨": "8",
                    "٩": "9"]
+        map.forEach { str = str.replacingOccurrences(of: $0, with: $1) }
+        return str
+    }
+    var convDigits: String {
+        var str = self
+        let map = ["،": " "]
         map.forEach { str = str.replacingOccurrences(of: $0, with: $1) }
         return str
     }

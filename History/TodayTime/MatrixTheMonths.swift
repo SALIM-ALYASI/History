@@ -73,7 +73,7 @@ class MatrixTheMonths {
         }
         return monthNumber
     }
-    static func namestoday() -> [String] {
+    static  func namestoday() -> [String] {
         let dayEng = ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"]
         let days = ["السبت","الاحد","الاثنين","الثلاثاء","الاربعاء","الخميس","الجمعه"]
         var todayNumber = [String]()
@@ -85,7 +85,88 @@ class MatrixTheMonths {
        
         return todayNumber
     }
-    
+    static func EvaluationData( month:String) -> [Evaluation] {
+        let userCalendar = Calendar.current
+        var evaluation = [Evaluation]()
+        switch month {
+        case "1","3","5","8","10":
+            for r in 0 ... 31 {
+                
+                let swiftDebutDateComponents = DateComponents(
+                  year: 2020,
+                  month: Int(month),
+                  day: r
+                )
+                 
+                // 3
+                let swiftDebutDate = userCalendar.date(from: swiftDebutDateComponents)!
+                let myFormatter = DateFormatter()
+                print("Swift’s debut date, via the DateFormatter: \(myFormatter.string(from: swiftDebutDate))")
+                 
+                myFormatter.dateStyle = .full
+                let evaluationd = myFormatter.string(from: swiftDebutDate)
+                let array = evaluationd.components(separatedBy: " ")
+                var today  =  array[0]
+                today = today.replacingOccurrences(of: "،", with: "")
+                let name = Evaluation.init(month: array[1], today: today, number: array[3])
+                
+                evaluation.append(name)
+            }
+
+        case "4","6","7","9" ,"11":
+            for r in 0 ... 30 {
+                
+                let swiftDebutDateComponents = DateComponents(
+                  year: 2020,
+                  month: Int(month),
+                  day: r
+                )
+                 
+                // 3
+                let swiftDebutDate = userCalendar.date(from: swiftDebutDateComponents)!
+                let myFormatter = DateFormatter()
+                print("Swift’s debut date, via the DateFormatter: \(myFormatter.string(from: swiftDebutDate))")
+                 
+                myFormatter.dateStyle = .full
+                let evaluationd = myFormatter.string(from: swiftDebutDate)
+                let array = evaluationd.components(separatedBy: " ")
+                var today  =  array[0]
+                today = today.replacingOccurrences(of: "،", with: "")
+                let name = Evaluation.init(month: array[1], today: today, number: array[3])
+                
+                evaluation.append(name)
+            }
+        case "2":
+            for r in 0 ... 29 {
+                
+                let swiftDebutDateComponents = DateComponents(
+                  year: 2020,
+                  month: Int(month),
+                  day: r
+                )
+                 
+                // 3
+                let swiftDebutDate = userCalendar.date(from: swiftDebutDateComponents)!
+                let myFormatter = DateFormatter()
+                print("Swift’s debut date, via the DateFormatter: \(myFormatter.string(from: swiftDebutDate))")
+                 
+                myFormatter.dateStyle = .full
+                let evaluationd = myFormatter.string(from: swiftDebutDate)
+                let array = evaluationd.components(separatedBy: " ")
+                var today  =  array[0]
+                today = today.replacingOccurrences(of: "،", with: "")
+                let name = Evaluation.init(month: array[1], today: today, number: array[3])
+                
+                evaluation.append(name)
+            }
+            
+        default:
+            break
+        }
+       
+      
+        return evaluation
+    }
     
     
 }
@@ -98,4 +179,10 @@ class Viewclass :  UIView {
             self.layer.shadowRadius = 2.0
          
      }
+}
+struct Evaluation {
+    var month: String?
+    var today: String?
+    var number: String?
+    
 }
