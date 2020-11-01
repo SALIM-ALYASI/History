@@ -13,16 +13,16 @@ class ViewController: UIViewController {
     var historyAeri =  [Evaluation]()
   var monthName = ""
     var monthNumber = [Months]()
-    var todayNumber = [String]()
+    var years = Int(TodayTime.Years())
     var isSelectedOtherCity = false
     var lastIndexPathCitySelected:IndexPath = IndexPath()
     @IBOutlet weak var monthscollectionView: UICollectionView!
     @IBOutlet weak var evaluationcollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:TodayTime.TodayByNumbers().convertHindiDigits))
+        historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:TodayTime.TodayByNumbers().convertHindiDigits, Year:years ?? 2020 ))
         monthName =  TodayTime.TodayNumbers ()
-        monthNumber.append(contentsOf:  MatrixTheMonths.namesMonths() )
+        monthNumber.append(contentsOf:  MatrixTheMonths.namesMonths(Year: years ?? 2020) )
        
         title = "\(TodayTime.TodayNumbers ())"
         DateDisplayLabel.text = "\(TodayTime.TodayNumbers ())"
@@ -101,7 +101,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
                
                 monthName =   monthNumber[indexPath.row].month ?? ""
             // BringDate(Month: indexPath.row)
-                historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)"))
+                historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year: years ?? 2020))
                 self.evaluationcollectionView.reloadData()
                 DateDisplayLabel.text = "\(monthName)"
                 return
@@ -118,7 +118,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
               cell.monthLabel.layer.borderWidth = 1.5
         cell.monthLabel.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
            monthName =    monthNumber[indexPath.row].month ?? ""
-            historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)"))
+            historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year: years ?? 2020))
         self.evaluationcollectionView.reloadData()
         lastIndexPathCitySelected = indexPath
            

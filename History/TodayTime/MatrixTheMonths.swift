@@ -8,7 +8,7 @@
 import UIKit
 class MatrixTheMonths {
   
-    static func EvaluationData( month:String) -> [Evaluation] {
+    static func EvaluationData( month:String,Year:Int) -> [Evaluation] {
         let userCalendar = Calendar.current
         var evaluation = [Evaluation]()
         let Today = 1
@@ -19,7 +19,12 @@ class MatrixTheMonths {
         case "4","6","7","9" ,"11":
             numberDays =  30
         case "2":
-            numberDays = 29
+            if TodayTime.Years().convertHindiDigits == "2020" || TodayTime.Years().convertHindiDigits == "2024"  || TodayTime.Years().convertHindiDigits == "2028"{
+                numberDays = 29
+            }else{
+                numberDays = 28
+            }
+           
             
         default:
           break
@@ -27,7 +32,7 @@ class MatrixTheMonths {
         for r in 0 ..< numberDays {
             
             let swiftDebutDateComponents = DateComponents(
-              year: 2020,
+              year: Year,
               month: Int(month),
               day:  Today + r
             )
@@ -52,13 +57,13 @@ class MatrixTheMonths {
         return evaluation
     }
   
-    static func namesMonths() -> [Months] {
+    static func namesMonths(Year:Int) -> [Months] {
         let userCalendar = Calendar.current
         var Monthsary = [Months]()
         for r in 1 ... 12 {
             
             let swiftDebutDateComponents = DateComponents(
-              year: 2020,
+              year: Year,
               month: r,
               day: 1
             )
