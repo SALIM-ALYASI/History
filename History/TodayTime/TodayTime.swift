@@ -64,4 +64,15 @@ class TodayTime {
 
            return dateFormatter.string(from: date)
        }
+    
+       static func dateNow() -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+             let dateFormatter = DateFormatter()
+             dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
+             dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
+       
+          dateFormatter.dateFormat = "yyyy MMM EEEE"
+
+            return dateFormatter.string(from: date)
+        }
 }

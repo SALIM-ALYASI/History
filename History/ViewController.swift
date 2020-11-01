@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         monthName =  TodayTime.TodayNumbers ()
         monthNumber.append(contentsOf:  MatrixTheMonths.namesMonths(Year: years ?? 2020) )
        
-        title =  TodayTime.Years()
+        title =  TodayTime.dateNow() 
         DateDisplayLabel.text = "\(TodayTime.TodayNumbers ())"
         monthscollectionView.showsHorizontalScrollIndicator = false
         monthscollectionView.showsVerticalScrollIndicator = false
@@ -67,7 +67,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
 
             return cell
         }else{
-            if indexPath.row + 1 == Int(TodayTime.Todaydaynumber().convertHindiDigits) && title == historyAeri[indexPath.row].number{
+            if indexPath.row + 1 == Int(TodayTime.Todaydaynumber().convertHindiDigits) && TodayTime.TodayNumbers()  == historyAeri[indexPath.row].number{
             let cell = evaluationcollectionView.dequeueReusableCell(withReuseIdentifier: "RightNowCell", for: indexPath) as! RightNowCell
                 cell.rightBayTodayLabel.text = historyAeri[indexPath.row].month
                 cell.rightTodayLabel.text =  historyAeri[indexPath.row].today
