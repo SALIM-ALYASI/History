@@ -15,7 +15,7 @@ var Homeal :Int?
    override func awakeFromNib() {
                super.awakeFromNib()
    
-           
+
                if  monthView.backgroundColor == #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)  {
                 monthLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
                           }else{
@@ -31,7 +31,7 @@ var Homeal :Int?
                if  monthView.backgroundColor == #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)  {
                 monthLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
                }else{
-                monthLabel.textColor =  #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+                monthLabel.textColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
              }
              }
         }

@@ -110,7 +110,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
             print(2,lastIndexPathCitySelected)
         let lastCellSelected =  monthscollectionView.cellForItem(at: lastIndexPathCitySelected ) as! Monthscell
            // print(indexPath.row)
-        lastCellSelected.monthLabel.textColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        lastCellSelected.monthLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         lastCellSelected.monthView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
        lastCellSelected.monthView.layer.cornerRadius = 15
        lastCellSelected.monthView.layer.borderWidth = 1.5
