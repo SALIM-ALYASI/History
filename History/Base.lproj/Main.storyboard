@@ -36,32 +36,32 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HistoryCell" id="Flf-1y-KcN" customClass="HistoryCell" customModule="History" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DaysMonthCell" id="Flf-1y-KcN" customClass="DaysMonthCell" customModule="History" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Q8-MC-YLP" customClass="Viewclass" customModule="History" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s8H-cO-1fZ" customClass="Viewclass">
-                                                    <rect key="frame" x="5" y="5" width="75" height="75"/>
+                                                    <rect key="frame" x="5" y="5" width="50" height="50"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="819-xd-LJ1">
-                                                            <rect key="frame" x="5" y="52" width="65" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <rect key="frame" x="5" y="30.5" width="40" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اليوم" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-gs-iub">
-                                                            <rect key="frame" x="5" y="5" width="65" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <rect key="frame" x="5" y="5" width="40" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="Irc-JY-Lhd"/>
-                                                        <constraint firstAttribute="height" constant="75" id="OXU-Te-Jcx"/>
+                                                        <constraint firstAttribute="width" constant="50" id="Irc-JY-Lhd"/>
+                                                        <constraint firstAttribute="height" constant="50" id="OXU-Te-Jcx"/>
                                                         <constraint firstItem="819-xd-LJ1" firstAttribute="leading" secondItem="s8H-cO-1fZ" secondAttribute="leading" constant="5" id="jAx-MK-dpz"/>
                                                         <constraint firstAttribute="bottom" secondItem="819-xd-LJ1" secondAttribute="bottom" constant="5" id="kfW-PD-OGH"/>
                                                         <constraint firstAttribute="trailing" secondItem="819-xd-LJ1" secondAttribute="trailing" constant="5" id="ssX-iM-hqV"/>
@@ -80,43 +80,43 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="dayLabel" destination="Acs-gs-iub" id="DR6-tC-xEc"/>
-                                            <outlet property="historyLabel" destination="819-xd-LJ1" id="k6E-O5-7zF"/>
-                                            <outlet property="viewCL" destination="s8H-cO-1fZ" id="L2v-9S-Z30"/>
+                                            <outlet property="backgroundview" destination="s8H-cO-1fZ" id="Mae-gJ-AUa"/>
+                                            <outlet property="todaysDateLabel" destination="Acs-gs-iub" id="E1T-ZD-kJu"/>
+                                            <outlet property="todaysLabel" destination="819-xd-LJ1" id="G7h-iN-5G9"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HistoryCell2" id="6OC-cd-ZEz" customClass="HistoryCell" customModule="History" customModuleProvider="target">
-                                        <rect key="frame" x="103" y="0.0" width="85" height="85"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RightNowCell" id="6OC-cd-ZEz" customClass="RightNowCell" customModule="History" customModuleProvider="target">
+                                        <rect key="frame" x="83.5" y="0.0" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kHe-en-k2t" customClass="Viewclass" customModule="History" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fR2-Zx-ufK" customClass="Viewclass">
-                                                    <rect key="frame" x="5" y="5" width="75" height="75"/>
+                                                    <rect key="frame" x="5" y="5" width="50" height="50"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qav-XT-NbW">
-                                                            <rect key="frame" x="5" y="46" width="65" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qav-XT-NbW">
+                                                            <rect key="frame" x="5" y="25.5" width="40" height="19.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اليوم" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7US-ab-ZSU">
-                                                            <rect key="frame" x="5" y="5" width="65" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اليوم" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7US-ab-ZSU">
+                                                            <rect key="frame" x="5" y="5" width="40" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="75" id="4ff-26-kBd"/>
+                                                        <constraint firstAttribute="height" constant="50" id="4ff-26-kBd"/>
                                                         <constraint firstAttribute="bottom" secondItem="Qav-XT-NbW" secondAttribute="bottom" constant="5" id="I5F-Mw-ec7"/>
                                                         <constraint firstItem="7US-ab-ZSU" firstAttribute="leading" secondItem="fR2-Zx-ufK" secondAttribute="leading" constant="5" id="O9S-fa-b6I"/>
                                                         <constraint firstItem="7US-ab-ZSU" firstAttribute="top" secondItem="fR2-Zx-ufK" secondAttribute="top" constant="5" id="PD8-Ck-F0S"/>
                                                         <constraint firstItem="Qav-XT-NbW" firstAttribute="leading" secondItem="fR2-Zx-ufK" secondAttribute="leading" constant="5" id="Q7K-Bm-t3Z"/>
                                                         <constraint firstAttribute="trailing" secondItem="Qav-XT-NbW" secondAttribute="trailing" constant="5" id="QWl-io-RAb"/>
-                                                        <constraint firstAttribute="width" constant="75" id="gq3-iM-BWU"/>
+                                                        <constraint firstAttribute="width" constant="50" id="gq3-iM-BWU"/>
                                                         <constraint firstAttribute="trailing" secondItem="7US-ab-ZSU" secondAttribute="trailing" constant="5" id="vfv-bm-sdG"/>
                                                     </constraints>
                                                 </view>
@@ -129,9 +129,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="dayLabel2" destination="Qav-XT-NbW" id="kC4-l7-fzy"/>
-                                            <outlet property="historyLabel2" destination="7US-ab-ZSU" id="KIT-Js-Xpj"/>
-                                            <outlet property="viewCL2" destination="fR2-Zx-ufK" id="VJ4-gl-gBU"/>
+                                            <outlet property="rightBayTodayLabel" destination="Qav-XT-NbW" id="jAb-uI-Bmq"/>
+                                            <outlet property="rightTodayLabel" destination="7US-ab-ZSU" id="bDN-NG-dg2"/>
+                                            <outlet property="rightthebackgroundView" destination="fR2-Zx-ufK" id="vEd-Vu-waQ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -153,7 +153,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Bookings_Collectioncell" id="jUp-7f-Ygp" customClass="Bookings_Collectioncell" customModule="History" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Monthscell" id="jUp-7f-Ygp" customClass="Monthscell" customModule="History" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="3" width="110" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oJn-C2-y5S">
@@ -179,8 +179,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="110" height="34"/>
                                         <connections>
-                                            <outlet property="cityTL" destination="r3l-RY-pdU" id="V54-7h-E6J"/>
-                                            <outlet property="viewCL" destination="oJn-C2-y5S" id="vFq-mJ-Uhx"/>
+                                            <outlet property="monthLabel" destination="r3l-RY-pdU" id="JjL-N5-B04"/>
+                                            <outlet property="monthView" destination="oJn-C2-y5S" id="fyJ-6O-hdZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -208,8 +208,8 @@
                     <navigationItem key="navigationItem" id="gXK-0n-YxD"/>
                     <connections>
                         <outlet property="DateDisplayLabel" destination="T7w-5v-UP4" id="6tW-oX-1Yo"/>
-                        <outlet property="collectionView" destination="SiA-Uu-7os" id="ZRJ-EM-0oT"/>
-                        <outlet property="collectionView2" destination="mcG-Kq-7qJ" id="xG9-k5-glh"/>
+                        <outlet property="evaluationcollectionView" destination="SiA-Uu-7os" id="7yT-Y4-2d6"/>
+                        <outlet property="monthscollectionView" destination="mcG-Kq-7qJ" id="E2b-CP-MMQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

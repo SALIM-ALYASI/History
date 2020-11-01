@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE14F2A3254E876E00452C25 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14F2A2254E876E00452C25 /* View.swift */; };
 		CE951066254B272C00080AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951065254B272C00080AB7 /* AppDelegate.swift */; };
 		CE951068254B272C00080AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951067254B272C00080AB7 /* SceneDelegate.swift */; };
 		CE95106A254B272C00080AB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951069254B272C00080AB7 /* ViewController.swift */; };
@@ -17,8 +18,8 @@
 		CE951088254B272D00080AB7 /* HistoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951087254B272D00080AB7 /* HistoryUITests.swift */; };
 		CE95109A254B29E300080AB7 /* TodayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951099254B29E300080AB7 /* TodayTime.swift */; };
 		CE95109F254B2FAD00080AB7 /* MatrixTheMonths.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95109E254B2FAD00080AB7 /* MatrixTheMonths.swift */; };
-		CE9510A7254B42E400080AB7 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9510A6254B42E400080AB7 /* HistoryCell.swift */; };
-		CE9510AC254B4AB100080AB7 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9510AB254B4AB100080AB7 /* CollectionReusableView.swift */; };
+		CE9510A7254B42E400080AB7 /* DaysMonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9510A6254B42E400080AB7 /* DaysMonthCell.swift */; };
+		CE9510AC254B4AB100080AB7 /* Monthscell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9510AB254B4AB100080AB7 /* Monthscell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE14F2A2254E876E00452C25 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		CE951062254B272C00080AB7 /* History.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = History.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE951065254B272C00080AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE951067254B272C00080AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +57,8 @@
 		CE951089254B272D00080AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE951099254B29E300080AB7 /* TodayTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTime.swift; sourceTree = "<group>"; };
 		CE95109E254B2FAD00080AB7 /* MatrixTheMonths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTheMonths.swift; sourceTree = "<group>"; };
-		CE9510A6254B42E400080AB7 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
-		CE9510AB254B4AB100080AB7 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		CE9510A6254B42E400080AB7 /* DaysMonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysMonthCell.swift; sourceTree = "<group>"; };
+		CE9510AB254B4AB100080AB7 /* Monthscell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthscell.swift; sourceTree = "<group>"; };
 		CEC4FE71254BE425002B0C22 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		CEC4FE72254BE425002B0C22 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,8 +119,8 @@
 				CE95106E254B272C00080AB7 /* Assets.xcassets */,
 				CE951070254B272C00080AB7 /* LaunchScreen.storyboard */,
 				CE951073254B272C00080AB7 /* Info.plist */,
-				CE9510A6254B42E400080AB7 /* HistoryCell.swift */,
-				CE9510AB254B4AB100080AB7 /* CollectionReusableView.swift */,
+				CE9510A6254B42E400080AB7 /* DaysMonthCell.swift */,
+				CE9510AB254B4AB100080AB7 /* Monthscell.swift */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -146,6 +148,7 @@
 			children = (
 				CE951099254B29E300080AB7 /* TodayTime.swift */,
 				CE95109E254B2FAD00080AB7 /* MatrixTheMonths.swift */,
+				CE14F2A2254E876E00452C25 /* View.swift */,
 			);
 			path = TodayTime;
 			sourceTree = "<group>";
@@ -281,8 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9510AC254B4AB100080AB7 /* CollectionReusableView.swift in Sources */,
-				CE9510A7254B42E400080AB7 /* HistoryCell.swift in Sources */,
+				CE14F2A3254E876E00452C25 /* View.swift in Sources */,
+				CE9510AC254B4AB100080AB7 /* Monthscell.swift in Sources */,
+				CE9510A7254B42E400080AB7 /* DaysMonthCell.swift in Sources */,
 				CE95109F254B2FAD00080AB7 /* MatrixTheMonths.swift in Sources */,
 				CE95106A254B272C00080AB7 /* ViewController.swift in Sources */,
 				CE951066254B272C00080AB7 /* AppDelegate.swift in Sources */,
