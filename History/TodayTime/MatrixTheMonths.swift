@@ -14,7 +14,7 @@ class MatrixTheMonths {
         let Today = 1
         var numberDays = 0
         switch month {
-        case "1","3","5","8","10":
+        case "1","3","5","8","10","12":
             numberDays = 31
         case "4","6","7","9" ,"11":
             numberDays =  30
@@ -40,8 +40,7 @@ class MatrixTheMonths {
             // 3
             let swiftDebutDate = userCalendar.date(from: swiftDebutDateComponents)!
             let myFormatter = DateFormatter()
-            print("Swift’s debut date, via the DateFormatter: \(myFormatter.string(from: swiftDebutDate))")
-             
+           
             myFormatter.dateStyle = .full
             let evaluationd = myFormatter.string(from: swiftDebutDate)
             let array = evaluationd.components(separatedBy: " ")
@@ -71,8 +70,7 @@ class MatrixTheMonths {
             // 3
             let swiftDebutDate = userCalendar.date(from: swiftDebutDateComponents)!
             let myFormatter = DateFormatter()
-            print("Swift’s debut date, via the DateFormatter: \(myFormatter.string(from: swiftDebutDate))")
-             
+          
             myFormatter.dateStyle = .full
             let evaluationd = myFormatter.string(from: swiftDebutDate)
             let array = evaluationd.components(separatedBy: " ")

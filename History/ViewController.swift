@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var historyAeri =  [Evaluation]()
   var monthName = ""
     var monthNumber = [Months]()
-    var years = Int(TodayTime.Years())
+    var years = Int(TodayTime.Years().convertHindiDigits)
     var isSelectedOtherCity = false
     var lastIndexPathCitySelected:IndexPath = IndexPath()
     @IBOutlet weak var monthscollectionView: UICollectionView!
@@ -103,6 +103,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
             // BringDate(Month: indexPath.row)
                 historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year: years ?? 2020))
                 self.evaluationcollectionView.reloadData()
+                print(indexPath.row + 1)
                 DateDisplayLabel.text = "\(monthName)"
                 return
                  }
@@ -117,6 +118,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
        cell.monthLabel.layer.cornerRadius = 15
               cell.monthLabel.layer.borderWidth = 1.5
         cell.monthLabel.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+            print(indexPath.row + 1)
            monthName =    monthNumber[indexPath.row].month ?? ""
             historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year: years ?? 2020))
         self.evaluationcollectionView.reloadData()
