@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE14F2A3254E876E00452C25 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14F2A2254E876E00452C25 /* View.swift */; };
+		CE7E8A7D254EAAC100BCEB2B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE7E8A7C254EAAC100BCEB2B /* Localizable.strings */; };
 		CE951066254B272C00080AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951065254B272C00080AB7 /* AppDelegate.swift */; };
 		CE951068254B272C00080AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951067254B272C00080AB7 /* SceneDelegate.swift */; };
 		CE95106A254B272C00080AB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951069254B272C00080AB7 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		CE14F2A2254E876E00452C25 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		CE7E8A7C254EAAC100BCEB2B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		CE951062254B272C00080AB7 /* History.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = History.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE951065254B272C00080AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE951067254B272C00080AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				CE951073254B272C00080AB7 /* Info.plist */,
 				CE9510A6254B42E400080AB7 /* DaysMonthCell.swift */,
 				CE9510AB254B4AB100080AB7 /* Monthscell.swift */,
+				CE7E8A7C254EAAC100BCEB2B /* Localizable.strings */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE951072254B272C00080AB7 /* LaunchScreen.storyboard in Resources */,
+				CE7E8A7D254EAAC100BCEB2B /* Localizable.strings in Resources */,
 				CE95106F254B272C00080AB7 /* Assets.xcassets in Resources */,
 				CE95106D254B272C00080AB7 /* Main.storyboard in Resources */,
 			);

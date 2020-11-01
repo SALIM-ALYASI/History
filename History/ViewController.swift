@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         monthName =  TodayTime.TodayNumbers ()
         monthNumber.append(contentsOf:  MatrixTheMonths.namesMonths(Year: years ?? 2020) )
        
-        title = "\(TodayTime.TodayNumbers ())"
+        title =  TodayTime.Years()
         DateDisplayLabel.text = "\(TodayTime.TodayNumbers ())"
         monthscollectionView.showsHorizontalScrollIndicator = false
         monthscollectionView.showsVerticalScrollIndicator = false
@@ -127,7 +127,7 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
         }else{
            
            
-            DateDisplayLabel.text = "\(historyAeri[indexPath.row].number ?? "")"
+            DateDisplayLabel.text = "\(historyAeri[indexPath.row].today ?? "")"
         }
     }
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
