@@ -26,7 +26,17 @@ class EvaluationViewController: UIViewController {
 //        historyAeri.append(contentsOf: //)
 }
     
-
+    func tothrow() -> String {
+        var day = ""
+        let todayday =  TodayTime.Todaydaynumber().convertHindiDigits
+        let array = Array(todayday)
+        if array[0] == "0" {
+            day = "\(array[1])"
+        }else{
+            day = todayday
+        }
+         return day
+    }
 }
 extension EvaluationViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
    
@@ -56,6 +66,25 @@ extension EvaluationViewController:UICollectionViewDelegate, UICollectionViewDat
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
+        if tothrow() == historyAeri[indexPath.section].Today[indexPath.row].month!.convertHindiDigits && historyAeri[indexPath.section].Today[indexPath.row].today == TodayTime.Todayday().convertHindiDigits && historyAeri[indexPath.section].Today[indexPath.row].year == TodayTime.Years() && TodayTime.TodayNumbers () == historyAeri[indexPath.section].Today[indexPath.row].number {
+        let cell = evaluationcollectionView.dequeueReusableCell(withReuseIdentifier: "EvaluatioRightNowCell", for: indexPath) as! EvaluatioRightNowCell
+            
+            if historyAeri[indexPath.section].Today[indexPath.row].month ?? ""  == "1"{
+                   
+                cell.rightBayTodayLabel.text = ""
+                cell.rightTodayLabel.text =  ""
+             cell.rightthebackgroundView.layer.cornerRadius = 15
+             cell.rightthebackgroundView.layer.borderWidth = 1.5
+                 cell.rightthebackgroundView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            }else{
+                cell.rightBayTodayLabel.text = historyAeri[indexPath.section].Today[indexPath.row].month
+                cell.rightTodayLabel.text =  historyAeri[indexPath.section].Today[indexPath.row].today
+                cell.rightthebackgroundView.layer.cornerRadius = 15
+                cell.rightthebackgroundView.layer.borderWidth = 1.5
+                cell.rightthebackgroundView.layer.borderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+            }
+            return cell
+        }else{
         let cell = evaluationcollectionView.dequeueReusableCell(withReuseIdentifier: "EvaluatioDaysMonthCell", for: indexPath) as! EvaluatioDaysMonthCell
         if historyAeri[indexPath.section].Today[indexPath.row].month ?? ""  == "1"{
         cell.todaysDateLabel.text = ""
@@ -73,8 +102,14 @@ extension EvaluationViewController:UICollectionViewDelegate, UICollectionViewDat
        cell.backgroundview.layer.borderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
        }
                         return cell
+        }
       }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print( 1, historyAeri[indexPath.section].Today[indexPath.row].month!,TodayTime.Todaydaynumber().convertHindiDigits)
+        
+        print(2,tothrow(),historyAeri[indexPath.section].Today[indexPath.row].month!.convertHindiDigits)
+        print(3,TodayTime.Todaydaynumber().convertHindiDigits)
+        print(4,historyAeri[indexPath.section].Today[indexPath.row].month!)
     }
     
   
@@ -85,5 +120,5 @@ extension EvaluationViewController:UICollectionViewDelegate, UICollectionViewDat
       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
           return  1
       }
- 
+   
 }
