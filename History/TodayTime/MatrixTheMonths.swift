@@ -7,9 +7,9 @@
 
 import UIKit
 class MatrixTheMonths {
-  
+    static let userCalendar = Calendar.current
+//  جلب ايام شهر
     static func EvaluationData( month:String,Year:Int) -> [Evaluation] {
-        let userCalendar = Calendar.current
         var evaluation = [Evaluation]()
         let Today = 1
         var numberDays = 0
@@ -28,6 +28,44 @@ class MatrixTheMonths {
             
         default:
           break
+        }
+        
+        print("اليوم:",MatrixTheMonths.Today(month:Int(month) ?? 1,year:Year))
+        evaluation.removeAll()
+        switch MatrixTheMonths.Today(month:Int(month) ?? 1,year:Year) {
+        case "Saturday".localized:
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+         case "Monday".localized:
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+        case "Tuesday".localized:
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+           
+        case "Wednesday".localized:
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+          
+        case "Thursday".localized:
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+           
+        case "Friday".localized:
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+            evaluation.append(Evaluation.init(month:  "1", today: "1", number: "1",year:"1"))
+           
+        default:
+            break
         }
         for r in 0 ..< numberDays {
             
@@ -48,16 +86,15 @@ class MatrixTheMonths {
             today = today.replacingOccurrences(of: "،", with: "")
             var month  =  array[2]
             month = month.replacingOccurrences(of: "،", with: "")
-            let name = Evaluation.init(month: array[1], today: today, number: month)
+            let name = Evaluation.init(month: array[1], today: today, number: month,year:array[3])
             
             evaluation.append(name)
         }
       
         return evaluation
     }
-  
+//  جلب اشهر سنه
     static func namesMonths(Year:Int) -> [Months] {
-        let userCalendar = Calendar.current
         var Monthsary = [Months]()
         for r in 1 ... 12 {
             
@@ -77,36 +114,65 @@ class MatrixTheMonths {
           
             var month  =  array[2]
             month = month.replacingOccurrences(of: "،", with: "")
-            let name = Months.init(month: month)
+            var today  =  array[0]
+            today = today.replacingOccurrences(of: "،", with: "")
+            let name = Months.init(month: month, today: today)
             
             Monthsary.append(name)
         }
         return Monthsary
     }
-}
-class Viewclass :  UIView {
-    override func didMoveToWindow() {
-            self.layer.cornerRadius = 10
-            self.layer.shadowColor = UIColor.black.cgColor
-            self.layer.shadowOffset = CGSize(width: 1, height: 1)
-            self.layer.shadowOpacity = 0.3
-            self.layer.shadowRadius = 2.0
+//    جلب اول يوم في شهر
+    static func  Today(month:Int,year:Int)-> String {
+        let swiftDebutDateComponents = DateComponents(
+          year: year,
+          month: month,
+          day: 1
+        )
          
-     }
-}
-struct Evaluation {
-    var month: String?
-    var today: String?
-    var number: String?
-    
-}
-struct Months {
-    var month: String?
-   
-    
-}
-extension String{
-    var localized:String{
-        return NSLocalizedString(self, comment: "")
+      
+        let swiftDebutDate = userCalendar.date(from: swiftDebutDateComponents)!
+        let myFormatter = DateFormatter()
+      
+        myFormatter.dateStyle = .full
+        let evaluationd = myFormatter.string(from: swiftDebutDate)
+        let array = evaluationd.components(separatedBy: " ")
+      
+        var today  =  array[0]
+        today = today.replacingOccurrences(of: "،", with: "")
+        
+        return today
     }
+    static func  MonthsFunc(month:Int,year:Int)-> String {
+        let swiftDebutDateComponents = DateComponents(
+          year: year,
+          month: month,
+          day: 1
+        )
+         
+      
+        let swiftDebutDate = userCalendar.date(from: swiftDebutDateComponents)!
+        let myFormatter = DateFormatter()
+      
+        myFormatter.dateStyle = .full
+        let evaluationd = myFormatter.string(from: swiftDebutDate)
+        let array = evaluationd.components(separatedBy: " ")
+      
+        var month  =  array[2]
+        month = month.replacingOccurrences(of: "،", with: "")
+        
+        return month
+    }
+    static func AllMonthsFunc() -> [AllMonths]{
+        
+        var MonthsaryData = [AllMonths]()
+        for item in 1 ... 12 {
+            let name = MatrixTheMonths.EvaluationData(month: "\(item)", Year: Int(TodayTime.Years().convertHindiDigits) ?? 2020)
+            MonthsaryData.append(AllMonths.init(Month: MatrixTheMonths.MonthsFunc(month:item,year:Int(TodayTime.Years().convertHindiDigits) ?? 2020), Today: name))
+        }
+        return MonthsaryData
+    }
+    
 }
+
+

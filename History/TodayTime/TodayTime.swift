@@ -8,7 +8,7 @@
 import UIKit
 class TodayTime {
     static let timestamp = NSDate().timeIntervalSince1970
-    //"MM"
+    //جلب اسم شهر 
   static func TodayNumbers () -> String {
     
      let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
@@ -20,7 +20,7 @@ class TodayTime {
 
          return dateFormatter.string(from: date)
      }
-    //"MM"
+    //جاب شهر بلارقام
   static func TodayByNumbers () -> String {
      let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
           let dateFormatter = DateFormatter()
@@ -31,7 +31,7 @@ class TodayTime {
 
          return dateFormatter.string(from: date)
      }
-    
+//    جلب ايام الاسبوع
     static func Todayday() -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
             let dateFormatter = DateFormatter()
@@ -42,7 +42,7 @@ class TodayTime {
 
            return dateFormatter.string(from: date)
        }
-//    Day with a number
+//     جلب يوم برقم
     static func Todaydaynumber() -> String {
        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
             let dateFormatter = DateFormatter()
@@ -53,7 +53,7 @@ class TodayTime {
 
            return dateFormatter.string(from: date)
        }
-    //
+    //جلب سنة
     static func Years() -> String {
        let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
             let dateFormatter = DateFormatter()
@@ -64,7 +64,7 @@ class TodayTime {
 
            return dateFormatter.string(from: date)
        }
-    
+//    جلب السنه وشهر واليوم
        static func dateNow() -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
              let dateFormatter = DateFormatter()
@@ -75,4 +75,6 @@ class TodayTime {
 
             return dateFormatter.string(from: date)
         }
+
+    
 }

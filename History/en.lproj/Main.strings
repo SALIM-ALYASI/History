@@ -6,31 +6,31 @@
 "819-xd-LJ1.text" = " ";
 
 /* Class = "UILabel"; text = "Wednesday"; ObjectID = "C5J-0w-NTS"; */
-"C5J-0w-NTS.text" = "الأربعاء";
+"C5J-0w-NTS.text" = "Wednesday";
 
 /* Class = "UILabel"; text = "Monday"; ObjectID = "Hl9-WP-vOO"; */
-"Hl9-WP-vOO.text" = "الاثنين";
+"Hl9-WP-vOO.text" = "Monday";
 
 /* Class = "UITabBarItem"; title = "Item"; ObjectID = "ICe-va-pOV"; */
 "ICe-va-pOV.title" = "Item";
 
 /* Class = "UILabel"; text = "Saturday"; ObjectID = "N0D-Xt-rER"; */
-"N0D-Xt-rER.text" = "السبت";
+"N0D-Xt-rER.text" = "Saturday";
 
 /* Class = "UILabel"; text = "Sunday"; ObjectID = "ORh-wo-I4Q"; */
-"ORh-wo-I4Q.text" = "الأحد";
+"ORh-wo-I4Q.text" = "Sunday";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "T7w-5v-UP4"; */
 "T7w-5v-UP4.text" = "Label";
 
 /* Class = "UILabel"; text = "Friday"; ObjectID = "ceo-h4-CGN"; */
-"ceo-h4-CGN.text" = "الجمعة";
+"ceo-h4-CGN.text" = "Friday";
 
 /* Class = "UILabel"; text = "Thursday"; ObjectID = "gTY-DK-K3x"; */
-"gTY-DK-K3x.text" = "الخميس";
+"gTY-DK-K3x.text" = "Thursday";
 
 /* Class = "UILabel"; text = "Tuesday"; ObjectID = "gzv-fL-2S9"; */
-"gzv-fL-2S9.text" = "الثلاثاء";
+"gzv-fL-2S9.text" = "Tuesday";
 
 /* Class = "UILabel"; text = " "; ObjectID = "ofp-Sn-NTV"; */
 "ofp-Sn-NTV.text" = " ";

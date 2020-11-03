@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var evaluationcollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:TodayTime.TodayByNumbers().convertHindiDigits, Year:years ?? 2020 ))
+        historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:TodayTime.TodayByNumbers ().convertHindiDigits, Year:years ?? 2020 ))
+       
         monthName =  TodayTime.TodayNumbers ()
         monthNumber.append(contentsOf:  MatrixTheMonths.namesMonths(Year: years ?? 2020) )
        
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
     
   
 }
+    
 }
 extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,UICollectionViewDelegateFlowLayout{
   
@@ -67,21 +69,42 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
 
             return cell
         }else{
-            if indexPath.row + 1 == Int(TodayTime.Todaydaynumber().convertHindiDigits) && TodayTime.TodayNumbers()  == historyAeri[indexPath.row].number{
+            
+            if indexPath.row + 1 == Int(TodayTime.Todaydaynumber().convertHindiDigits) && TodayTime.TodayNumbers()  == historyAeri[indexPath.row].number && TodayTime.Years().convertHindiDigits == historyAeri[indexPath.row].year?.convertHindiDigits{
             let cell = evaluationcollectionView.dequeueReusableCell(withReuseIdentifier: "RightNowCell", for: indexPath) as! RightNowCell
-                cell.rightBayTodayLabel.text = historyAeri[indexPath.row].month
-                cell.rightTodayLabel.text =  historyAeri[indexPath.row].today
-                cell.rightthebackgroundView.layer.cornerRadius = 15
-                cell.rightthebackgroundView.layer.borderWidth = 1.5
-                cell.rightthebackgroundView.layer.borderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+                
+                if historyAeri[indexPath.row].number ?? ""  == "1"{
+                       
+                    cell.rightBayTodayLabel.text = ""
+                    cell.rightTodayLabel.text =  ""
+                 cell.rightthebackgroundView.layer.cornerRadius = 15
+                 cell.rightthebackgroundView.layer.borderWidth = 1.5
+                     cell.rightthebackgroundView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                }else{
+                    cell.rightBayTodayLabel.text = historyAeri[indexPath.row].month
+                    cell.rightTodayLabel.text =  historyAeri[indexPath.row].today
+                    cell.rightthebackgroundView.layer.cornerRadius = 15
+                    cell.rightthebackgroundView.layer.borderWidth = 1.5
+                    cell.rightthebackgroundView.layer.borderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+                }
                 return cell
             }else{
                 let cell = evaluationcollectionView.dequeueReusableCell(withReuseIdentifier: "DaysMonthCell", for: indexPath) as! DaysMonthCell
-                cell.todaysDateLabel.text = "\(historyAeri[indexPath.row].number ?? "") \n \(historyAeri[indexPath.row].month ?? "")" 
-                cell.todaysLabel.text =  historyAeri[indexPath.row].today
-                cell.backgroundview.layer.cornerRadius = 15
-                cell.backgroundview.layer.borderWidth = 1.5
+                if historyAeri[indexPath.row].number ?? ""  == "1"{
+                    cell.todaysDateLabel.text  = ""
+                 cell.todaysLabel.text =  ""
+                 cell.backgroundview.layer.cornerRadius = 15
+                 cell.backgroundview.layer.borderWidth = 1.5
+                     cell.backgroundview.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                }else{
+                 
+            
+            cell.todaysDateLabel.text = historyAeri[indexPath.row].month
+            cell.todaysLabel.text =  historyAeri[indexPath.row].today
+            cell.backgroundview.layer.cornerRadius = 15
+            cell.backgroundview.layer.borderWidth = 1.5
                 cell.backgroundview.layer.borderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+                }
              
                         return cell
             }
@@ -100,14 +123,15 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
             if lastIndexPathCitySelected != nil{
                
                 monthName =   monthNumber[indexPath.row].month ?? ""
-            // BringDate(Month: indexPath.row)
-                historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year: years ?? 2020))
+                historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year:years ?? 2020 ))
+               
+
                 self.evaluationcollectionView.reloadData()
-                print(indexPath.row + 1)
+                print( "\(indexPath.row + 1)")
                 DateDisplayLabel.text = "\(monthName)"
                 return
                  }
-            print(2,lastIndexPathCitySelected)
+            print(5855,MatrixTheMonths.Today(month: indexPath.row + 1, year: 2020))
         let lastCellSelected =  monthscollectionView.cellForItem(at: lastIndexPathCitySelected ) as! Monthscell
            // print(indexPath.row)
         lastCellSelected.monthLabel.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -120,8 +144,8 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
         cell.monthLabel.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
             print(indexPath.row + 1)
            monthName =    monthNumber[indexPath.row].month ?? ""
-            historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year: years ?? 2020))
-        self.evaluationcollectionView.reloadData()
+            historyAeri.append(contentsOf:MatrixTheMonths.EvaluationData( month:"\(indexPath.row + 1)", Year:years ?? 2020 ))
+           self.evaluationcollectionView.reloadData()
         lastIndexPathCitySelected = indexPath
            
         }else{
@@ -133,7 +157,14 @@ extension ViewController:UICollectionViewDelegate, UICollectionViewDataSource  ,
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return (monthscollectionView.indexPathsForSelectedItems?.count ?? 0) < 2
     }
+  
+    func collectionView (_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat{
+        return 5
 
+        }
+      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+          return  1
+      }
  
 }
 
