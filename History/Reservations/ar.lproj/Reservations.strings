@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Sunday"; ObjectID = "KHw-y5-mvv"; */
+"KHw-y5-mvv.text" = "الأحد";
+
+/* Class = "UILabel"; text = "Saturday"; ObjectID = "Odb-8K-ami"; */
+"Odb-8K-ami.text" = "السبت";
+
+/* Class = "UILabel"; text = "Thursday"; ObjectID = "XTL-l0-RVb"; */
+"XTL-l0-RVb.text" = "الخميس";
+
+/* Class = "UILabel"; text = " "; ObjectID = "evD-ej-oSL"; */
+"evD-ej-oSL.text" = " ";
+
+/* Class = "UILabel"; text = "Wednesday"; ObjectID = "hjw-nO-apT"; */
+"hjw-nO-apT.text" = "الأربعاء";
+
+/* Class = "UILabel"; text = "Tuesday"; ObjectID = "kiS-Bb-l0e"; */
+"kiS-Bb-l0e.text" = "الثلاثاء";
+
+/* Class = "UILabel"; text = "Monday"; ObjectID = "lEx-Wc-dUN"; */
+"lEx-Wc-dUN.text" = "الاثنين";
+
+/* Class = "UILabel"; text = " "; ObjectID = "oCk-F2-DDU"; */
+"oCk-F2-DDU.text" = " ";
+
+/* Class = "UILabel"; text = "Friday"; ObjectID = "qkn-WW-V0w"; */
+"qkn-WW-V0w.text" = "جمعة";

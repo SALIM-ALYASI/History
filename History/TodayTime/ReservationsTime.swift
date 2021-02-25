@@ -6,9 +6,9 @@
 //
 
 import UIKit
-class TodayTime {
+class  ReservationsTime {
     static let timestamp = NSDate().timeIntervalSince1970
-    //جلب اسم شهر 
+    //جلب اسم شهر
   static func TodayNumbers () -> String {
     
      let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
@@ -31,6 +31,7 @@ class TodayTime {
 
          return dateFormatter.string(from: date)
      }
+ 
 //    جلب ايام الاسبوع
     static func Todayday() -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
@@ -76,5 +77,26 @@ class TodayTime {
             return dateFormatter.string(from: date)
         }
 
+//     h:mm a
+    static func hour() -> String {
+     let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+          let dateFormatter = DateFormatter()
+          dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
+          dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
     
+       dateFormatter.dateFormat = "h,a"
+
+         return dateFormatter.string(from: date)
+     }
+//    EEEE, MMM d, yyyy
+    static func Fetchtodaydate() -> String {
+     let date = Date(timeIntervalSince1970: TimeInterval(timestamp))
+          let dateFormatter = DateFormatter()
+          dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
+          dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
+    
+       dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+
+         return dateFormatter.string(from: date)
+     }
 }

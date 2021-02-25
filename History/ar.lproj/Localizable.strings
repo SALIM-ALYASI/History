@@ -1,7 +1,16 @@
+/* 
+  Localizable.strings
+  History
+
+  Created by ALYASI on 21/02/2021.
+  
+*/
 "Saturday" = "السبت";
-"Sunday" = "الأحد";
-"Monday" = "الاثنين";
+"Monday" =  "الاثنين";
 "Tuesday" = "الثلاثاء";
 "Wednesday" = "الأربعاء";
 "Thursday" = "الخميس";
 "Friday" = "الجمعة";
+"Sunday" = "الأحد";
+"PM" = "م";
+"AM" = "ص";

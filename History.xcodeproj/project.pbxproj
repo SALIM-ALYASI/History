@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE11584B25513C400033DED0 /* EvaluationCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11584A25513C400033DED0 /* EvaluationCollectionReusableView.swift */; };
-		CE14F2A3254E876E00452C25 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE14F2A2254E876E00452C25 /* View.swift */; };
-		CE31962B254FEBFE003C7FDC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31962A254FEBFE003C7FDC /* History.swift */; };
-		CE319630254FEC2F003C7FDC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31962F254FEC2F003C7FDC /* String.swift */; };
-		CE31963A254FED06003C7FDC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE31963C254FED06003C7FDC /* Localizable.strings */; };
-		CE4F99CC254F1FBF00053065 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F99CB254F1FBF00053065 /* EvaluationViewController.swift */; };
-		CE4F99D6254F29D100053065 /* EvaluationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4F99D5254F29D100053065 /* EvaluationCell.swift */; };
+		CE0F728025E391330073040D /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F727F25E391330073040D /* HourCell.swift */; };
+		CE0F728525E391FC0073040D /* HourNowcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F728425E391FC0073040D /* HourNowcell.swift */; };
 		CE951066254B272C00080AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951065254B272C00080AB7 /* AppDelegate.swift */; };
+		CE951068254B272C00080AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951067254B272C00080AB7 /* SceneDelegate.swift */; };
 		CE95106A254B272C00080AB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951069254B272C00080AB7 /* ViewController.swift */; };
+		CE95106D254B272C00080AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95106B254B272C00080AB7 /* Main.storyboard */; };
 		CE95106F254B272C00080AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE95106E254B272C00080AB7 /* Assets.xcassets */; };
 		CE951072254B272C00080AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE951070254B272C00080AB7 /* LaunchScreen.storyboard */; };
 		CE95107D254B272D00080AB7 /* HistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95107C254B272D00080AB7 /* HistoryTests.swift */; };
 		CE951088254B272D00080AB7 /* HistoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951087254B272D00080AB7 /* HistoryUITests.swift */; };
-		CE95109A254B29E300080AB7 /* TodayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951099254B29E300080AB7 /* TodayTime.swift */; };
+		CE95109A254B29E300080AB7 /* ReservationsTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE951099254B29E300080AB7 /* ReservationsTime.swift */; };
 		CE95109F254B2FAD00080AB7 /* MatrixTheMonths.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95109E254B2FAD00080AB7 /* MatrixTheMonths.swift */; };
-		CE9510A7254B42E400080AB7 /* DaysMonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9510A6254B42E400080AB7 /* DaysMonthCell.swift */; };
-		CE9510AC254B4AB100080AB7 /* Monthscell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9510AB254B4AB100080AB7 /* Monthscell.swift */; };
-		CEC4B83625514E5A00141A07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95106B254B272C00080AB7 /* Main.storyboard */; };
+		CE95C75C25E23D4D00846ED8 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95C75B25E23D4D00846ED8 /* History.swift */; };
+		CE95C76225E23DFD00846ED8 /* ReservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95C76125E23DFD00846ED8 /* ReservationsViewController.swift */; };
+		CE95C76725E23EB600846ED8 /* ReservationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95C76625E23EB600846ED8 /* ReservationsCell.swift */; };
+		CE95C76C25E23FA600846ED8 /* Reservations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE95C76B25E23FA600846ED8 /* Reservations.swift */; };
+		CE95C77D25E2457E00846ED8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE95C77F25E2457E00846ED8 /* Localizable.strings */; };
+		CE95C78725E245E300846ED8 /* Reservations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE95C78925E245E300846ED8 /* Reservations.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE11584A25513C400033DED0 /* EvaluationCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCollectionReusableView.swift; sourceTree = "<group>"; };
-		CE14F2A2254E876E00452C25 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		CE31962A254FEBFE003C7FDC /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		CE31962F254FEC2F003C7FDC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		CE31963B254FED06003C7FDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CE319640254FED0C003C7FDC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		CE4F99CB254F1FBF00053065 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
-		CE4F99D5254F29D100053065 /* EvaluationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationCell.swift; sourceTree = "<group>"; };
+		CE0F727F25E391330073040D /* HourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
+		CE0F728425E391FC0073040D /* HourNowcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourNowcell.swift; sourceTree = "<group>"; };
 		CE951062254B272C00080AB7 /* History.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = History.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE951065254B272C00080AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE951067254B272C00080AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE951069254B272C00080AB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE95106C254B272C00080AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE95106E254B272C00080AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,12 +61,17 @@
 		CE951083254B272D00080AB7 /* HistoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HistoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE951087254B272D00080AB7 /* HistoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryUITests.swift; sourceTree = "<group>"; };
 		CE951089254B272D00080AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE951099254B29E300080AB7 /* TodayTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTime.swift; sourceTree = "<group>"; };
+		CE951099254B29E300080AB7 /* ReservationsTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsTime.swift; sourceTree = "<group>"; };
 		CE95109E254B2FAD00080AB7 /* MatrixTheMonths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTheMonths.swift; sourceTree = "<group>"; };
-		CE9510A6254B42E400080AB7 /* DaysMonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysMonthCell.swift; sourceTree = "<group>"; };
-		CE9510AB254B4AB100080AB7 /* Monthscell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monthscell.swift; sourceTree = "<group>"; };
-		CEC4B83B25514E6500141A07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		CEC4B83D25514E9E00141A07 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		CE95C75B25E23D4D00846ED8 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		CE95C76125E23DFD00846ED8 /* ReservationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsViewController.swift; sourceTree = "<group>"; };
+		CE95C76625E23EB600846ED8 /* ReservationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationsCell.swift; sourceTree = "<group>"; };
+		CE95C76B25E23FA600846ED8 /* Reservations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservations.swift; sourceTree = "<group>"; };
+		CE95C77E25E2457E00846ED8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE95C78325E2459200846ED8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE95C78825E245E300846ED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Reservations.storyboard; sourceTree = "<group>"; };
+		CE95C78E25E2460500846ED8 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Reservations.strings; sourceTree = "<group>"; };
+		CEC4FE71254BE425002B0C22 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		CEC4FE72254BE425002B0C22 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,26 +100,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE4F99D3254F296200053065 /*  Evaluation */ = {
-			isa = PBXGroup;
-			children = (
-				CE4F99CB254F1FBF00053065 /* EvaluationViewController.swift */,
-				CE11584A25513C400033DED0 /* EvaluationCollectionReusableView.swift */,
-				CE4F99D5254F29D100053065 /* EvaluationCell.swift */,
-			);
-			path = " Evaluation";
-			sourceTree = "<group>";
-		};
-		CE4F99D4254F297900053065 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				CE951069254B272C00080AB7 /* ViewController.swift */,
-				CE9510A6254B42E400080AB7 /* DaysMonthCell.swift */,
-				CE9510AB254B4AB100080AB7 /* Monthscell.swift */,
-			);
-			path = History;
-			sourceTree = "<group>";
-		};
 		CE951059254B272C00080AB7 = {
 			isa = PBXGroup;
 			children = (
@@ -143,15 +123,18 @@
 		CE951064254B272C00080AB7 /* History */ = {
 			isa = PBXGroup;
 			children = (
-				CE95106B254B272C00080AB7 /* Main.storyboard */,
 				CE951065254B272C00080AB7 /* AppDelegate.swift */,
-				CE4F99D3254F296200053065 /*  Evaluation */,
-				CE4F99D4254F297900053065 /* History */,
-				CE951098254B29CF00080AB7 /* TodayTime */,
+				CE951067254B272C00080AB7 /* SceneDelegate.swift */,
+				CE951069254B272C00080AB7 /* ViewController.swift */,
+				CE95C77F25E2457E00846ED8 /* Localizable.strings */,
+				CE95106B254B272C00080AB7 /* Main.storyboard */,
+				CE0F728425E391FC0073040D /* HourNowcell.swift */,
+				CE0F727F25E391330073040D /* HourCell.swift */,
 				CE95106E254B272C00080AB7 /* Assets.xcassets */,
 				CE951070254B272C00080AB7 /* LaunchScreen.storyboard */,
 				CE951073254B272C00080AB7 /* Info.plist */,
-				CE31963C254FED06003C7FDC /* Localizable.strings */,
+				CE951098254B29CF00080AB7 /* TodayTime */,
+				CE95C76025E23DC700846ED8 /* Reservations */,
 			);
 			path = History;
 			sourceTree = "<group>";
@@ -177,13 +160,22 @@
 		CE951098254B29CF00080AB7 /* TodayTime */ = {
 			isa = PBXGroup;
 			children = (
-				CE951099254B29E300080AB7 /* TodayTime.swift */,
-				CE31962A254FEBFE003C7FDC /* History.swift */,
-				CE31962F254FEC2F003C7FDC /* String.swift */,
+				CE951099254B29E300080AB7 /* ReservationsTime.swift */,
 				CE95109E254B2FAD00080AB7 /* MatrixTheMonths.swift */,
-				CE14F2A2254E876E00452C25 /* View.swift */,
+				CE95C75B25E23D4D00846ED8 /* History.swift */,
 			);
 			path = TodayTime;
+			sourceTree = "<group>";
+		};
+		CE95C76025E23DC700846ED8 /* Reservations */ = {
+			isa = PBXGroup;
+			children = (
+				CE95C76125E23DFD00846ED8 /* ReservationsViewController.swift */,
+				CE95C76625E23EB600846ED8 /* ReservationsCell.swift */,
+				CE95C76B25E23FA600846ED8 /* Reservations.swift */,
+				CE95C78925E245E300846ED8 /* Reservations.storyboard */,
+			);
+			path = Reservations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,10 +282,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE95C77D25E2457E00846ED8 /* Localizable.strings in Resources */,
 				CE951072254B272C00080AB7 /* LaunchScreen.storyboard in Resources */,
-				CE31963A254FED06003C7FDC /* Localizable.strings in Resources */,
 				CE95106F254B272C00080AB7 /* Assets.xcassets in Resources */,
-				CEC4B83625514E5A00141A07 /* Main.storyboard in Resources */,
+				CE95106D254B272C00080AB7 /* Main.storyboard in Resources */,
+				CE95C78725E245E300846ED8 /* Reservations.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,18 +311,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE14F2A3254E876E00452C25 /* View.swift in Sources */,
-				CE319630254FEC2F003C7FDC /* String.swift in Sources */,
-				CE4F99CC254F1FBF00053065 /* EvaluationViewController.swift in Sources */,
-				CE9510AC254B4AB100080AB7 /* Monthscell.swift in Sources */,
-				CE9510A7254B42E400080AB7 /* DaysMonthCell.swift in Sources */,
-				CE31962B254FEBFE003C7FDC /* History.swift in Sources */,
+				CE95C75C25E23D4D00846ED8 /* History.swift in Sources */,
 				CE95109F254B2FAD00080AB7 /* MatrixTheMonths.swift in Sources */,
+				CE95C76725E23EB600846ED8 /* ReservationsCell.swift in Sources */,
 				CE95106A254B272C00080AB7 /* ViewController.swift in Sources */,
 				CE951066254B272C00080AB7 /* AppDelegate.swift in Sources */,
-				CE4F99D6254F29D100053065 /* EvaluationCell.swift in Sources */,
-				CE95109A254B29E300080AB7 /* TodayTime.swift in Sources */,
-				CE11584B25513C400033DED0 /* EvaluationCollectionReusableView.swift in Sources */,
+				CE0F728025E391330073040D /* HourCell.swift in Sources */,
+				CE95109A254B29E300080AB7 /* ReservationsTime.swift in Sources */,
+				CE95C76225E23DFD00846ED8 /* ReservationsViewController.swift in Sources */,
+				CE0F728525E391FC0073040D /* HourNowcell.swift in Sources */,
+				CE95C76C25E23FA600846ED8 /* Reservations.swift in Sources */,
+				CE951068254B272C00080AB7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,21 +357,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE31963C254FED06003C7FDC /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE31963B254FED06003C7FDC /* en */,
-				CE319640254FED0C003C7FDC /* ar */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
 		CE95106B254B272C00080AB7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CE95106C254B272C00080AB7 /* Base */,
-				CEC4B83B25514E6500141A07 /* en */,
-				CEC4B83D25514E9E00141A07 /* ar */,
+				CEC4FE71254BE425002B0C22 /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -391,6 +373,24 @@
 				CEC4FE72254BE425002B0C22 /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CE95C77F25E2457E00846ED8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE95C77E25E2457E00846ED8 /* ar */,
+				CE95C78325E2459200846ED8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CE95C78925E245E300846ED8 /* Reservations.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE95C78825E245E300846ED8 /* Base */,
+				CE95C78E25E2460500846ED8 /* ar */,
+			);
+			name = Reservations.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
