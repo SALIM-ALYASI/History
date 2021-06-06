@@ -119,8 +119,9 @@ extension ReservationsViewController:UICollectionViewDelegate, UICollectionViewD
   
  
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print(evaluation[indexPath.row].number ?? 0,ReservationsTime.Todaydaynumber())
         if evaluation[indexPath.row].month !=  ReservationsTime.Todaydaynumber() {
-        
+            
          let cell = evaluationcollectionView.dequeueReusableCell(withReuseIdentifier: "ReservationsCell", for: indexPath) as! ReservationsCell
         if evaluation[indexPath.row].today ==  "0" {
             
@@ -131,7 +132,7 @@ extension ReservationsViewController:UICollectionViewDelegate, UICollectionViewD
             cell.rightthebackgroundView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }else{
         cell.rightBayTodayLabel.text = evaluation[indexPath.row].number
-         // cell.rightTodayLabel.text = indexPathint[indexPath.row].Reservation
+        cell.rightTodayLabel.text = evaluation[indexPath.row].Reservation
         cell.rightthebackgroundView.layer.cornerRadius = 10
         cell.rightthebackgroundView.layer.borderWidth = 1.5
         cell.rightthebackgroundView.layer.borderColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)

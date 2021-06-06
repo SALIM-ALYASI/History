@@ -91,7 +91,22 @@ extension ViewController:UITableViewDelegate , UITableViewDataSource{
          
     }
   
-    
-    
+    private func  tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath){
+        //if collectionView ==    tableView{
+            let alert = Reservations().alert()
+
+           self.present(alert, animated: true)
+         //    }
+//        هدا كود نقل بيانات
+      
+
+        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+ 
+        let alert = Reservations().alert()
+
+       self.present(alert, animated: true)
+        
+    }
         }
  

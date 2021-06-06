@@ -50,7 +50,7 @@ class  ReservationsTime {
             dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
             dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
       
-         dateFormatter.dateFormat = "dd"
+         dateFormatter.dateFormat = "d"
 
            return dateFormatter.string(from: date)
        }
